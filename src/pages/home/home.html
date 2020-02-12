@@ -32,7 +32,7 @@
             <input type="text" value.bind="address" />
             <input type="text" value.bind="number" />
             <input type="text" value.bind="age" />
-            <button click.delegate="addInfo()">Add</button>
+            <button click.delegate="addBuddy()">Add</button>
           </div>
           <custom-table columns.to-view="['Id', 'Name', 'Address', 'Number', 'Age', '']" items.bind="buddies">
               <template replace-part="row">
@@ -46,39 +46,17 @@
                   ${item.address}
                 </td>
                 <td>
-                  ${item.number}
+                  ${item.phoneNumber}
                 </td>
                 <td>
                   ${item.age}
                 </td>
                 <td>
-                  <a class="delete" click.trigger="deleteInfo(item)">Delete</a>
+                  <a class="delete" click.trigger="deleteBuddy(item.id)">Delete</a>
                 </td>
               </template>
           </custom-table>
 
-        </div>
-      </div>
-    </section>
-
-    <section class="details-container" style="background-color: #2f3234; background-image: url(/assets/images/honeycomb-texture.svg); background-repeat: repeat; background-size: cover;">
-      <div class="container">
-
-        <h2>
-          Familiar Technologies
-        </h2>
-        <p class="ptext dark-background">
-          ${techDesc}
-        </p>
-        <div style="width: 100%; padding-bottom: 60px;">
-          <ul id="hexGrid">
-            <li class="hex" repeat.for="technology of technologies" with.bind="technology" click.delegate="selectTech(technology)">
-              <a class="hexIn" href="#">
-                <div class="gradient ${isActive? 'pressed':''}"></div>
-                <h1>${name}</h1>
-              </a>
-            </li>
-          </ul>
         </div>
       </div>
     </section>
