@@ -25,12 +25,4 @@ export class Header {
             this.showNavOptions = false;
         }
     }
-
-    scrollToTop() {
-        // document.getElementById("top").scrollIntoView({ 
-        //     behavior: 'smooth'
-        // });
-        // window.scrollTo({top: 0, behavior: 'smooth'});
-        
-    }
 }

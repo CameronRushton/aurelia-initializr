@@ -1,5 +1,6 @@
 import { inject, PLATFORM } from "aurelia-framework";
 import { Router } from "aurelia-router"
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import {activationStrategy} from 'aurelia-router';
 
 @inject(Router)
